@@ -209,17 +209,15 @@ int _tmain(int argc, _TCHAR* argv[])
 				iV_GetSample(&sampleData);
 				sprintf(BufferL, "%lf", sampleData.leftEye.gazeX);
 				sprintf(BufferR, "%lf", sampleData.leftEye.gazeY);
-				strcpy(inputBuffer, "X: ");
 				strcat(inputBuffer, BufferL);
 				strcat(inputBuffer, " _ ");
-				strcat(inputBuffer, "Y: ");
 				strcat(inputBuffer, BufferR);
 
 				//call back end
-				//sendToResult = sendto(sock, inputBuffer, strlen(inputBuffer), 0, (SOCKADDR*)& serverAddr, sizeof(serverAddr));
+				//printf("%s\n", inputBuffer);
 				sendToResult = sendto(sock, inputBuffer, strlen(inputBuffer), 0, (SOCKADDR*)& serverAddr, sizeof(serverAddr));
 
-				if (sendToResult == SOCKET_ERROR) {
+				if (0&&sendToResult == SOCKET_ERROR) {
 					wprintf(L"sendto failed with error: %d\n", WSAGetLastError());
 					closesocket(sock);
 					WSACleanup();
