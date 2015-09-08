@@ -27,6 +27,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	CalibrationStruct calibrationData;
 	CalibrationPointStruct calibrationPointStruct;
 	SampleStruct sampleData;
+	SpeedModeStruct speedModeData;
+	int returnedValue = 0;
+	int numOfCalibrationPoints;
 
 	//add
 	SOCKET sock;
@@ -100,10 +103,8 @@ int _tmain(int argc, _TCHAR* argv[])
  		if(1)
 		{
 			// set up calibration point
-			calibrationPointStruct.number = 5;
-			calibrationPointStruct.positionX = 700;
-			calibrationPointStruct.positionY = 700;
-			iV_GetCurrentCalibrationPoint(&calibrationPointStruct);
+			iV_SetSpeedMode(30);
+			iV_ChangeCalibrationPoint(1, 30, 30);
 
 			// set up calibration
 			calibrationData.method = 5;
@@ -202,34 +203,32 @@ int _tmain(int argc, _TCHAR* argv[])
 			char inputBuffer[BUFMAX] = { 0 };
 			char BufferL[BUFMAX] = { 0 };// + std::to_string(accuracyData.deviationLX);
 			char BufferR[BUFMAX] = { 0 };
+			int i;
 
-			for (;;)
-			{
-				//call back
-				iV_GetSample(&sampleData);
-				sprintf(BufferL, "%lf", sampleData.leftEye.gazeX);
-				sprintf(BufferR, "%lf", sampleData.leftEye.gazeY);
-				strcat(inputBuffer, BufferL);
-				strcat(inputBuffer, " _ ");
-				strcat(inputBuffer, BufferR);
+			//call back
+			iV_GetSample(&sampleData);
+			sprintf(BufferL, "%lf", sampleData.leftEye.gazeX);
+			sprintf(BufferR, "%lf", sampleData.leftEye.gazeY);
+			strcat(inputBuffer, BufferL);
+			strcat(inputBuffer, " _ ");
+			strcat(inputBuffer, BufferR);
 
-				//call back end
-				//printf("%s\n", inputBuffer);
-				sendToResult = sendto(sock, inputBuffer, strlen(inputBuffer), 0, (SOCKADDR*)& serverAddr, sizeof(serverAddr));
+			//call back end
+			printf("%s\n", inputBuffer);
+			printf("\n");
+			// = sendto(sock, inputBuffer, strlen(inputBuffer), 0, (SOCKADDR*)& serverAddr, sizeof(serverAddr));
 
-				if (sendToResult == SOCKET_ERROR) {
-					wprintf(L"sendto failed with error: %d\n", WSAGetLastError());
-					closesocket(sock);
-					WSACleanup();
+			//if (sendToResult == SOCKET_ERROR) {
+				//wprintf(L"sendto failed with error: %d\n", WSAGetLastError());
+				//closesocket(sock);
+				//WSACleanup();
 
-					puts("Press any key to continue");
-					getc(stdin);
-					exit(sendToResult);
-				}
-			}
+				//puts("Press any key to continue");
+				//getc(stdin);
+				//exit(sendToResult);
+				//}
 			//end
-		}
-						
+		}				
 
 		getchar();
 		
