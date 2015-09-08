@@ -217,7 +217,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				//printf("%s\n", inputBuffer);
 				sendToResult = sendto(sock, inputBuffer, strlen(inputBuffer), 0, (SOCKADDR*)& serverAddr, sizeof(serverAddr));
 
-				if (0&&sendToResult == SOCKET_ERROR) {
+				if (sendToResult == SOCKET_ERROR) {
 					wprintf(L"sendto failed with error: %d\n", WSAGetLastError());
 					closesocket(sock);
 					WSACleanup();
