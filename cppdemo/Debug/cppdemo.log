@@ -1,4 +1,4 @@
-﻿Build started 9/8/2015 2:08:40 PM.
+﻿Build started 9/9/2015 9:55:50 AM.
      1>Project "C:\Users\zjarsen\Desktop\eyeTracking-offscreenCalibration\cppdemo\cppdemo.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (cppdemo.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
@@ -9,24 +9,24 @@
          c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(2): note: use of precompiled header
      1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(56): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
          c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1850): note: see declaration of 'inet_addr'
-     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(210): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(214): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(211): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(215): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(212): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(216): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(90): note: see declaration of 'strcat'
-     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(213): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(217): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(90): note: see declaration of 'strcat'
-     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(214): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(218): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(90): note: see declaration of 'strcat'
      1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(30): warning C4101: 'speedModeData': unreferenced local variable
      1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(32): warning C4101: 'numOfCalibrationPoints': unreferenced local variable
      1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(28): warning C4101: 'calibrationPointStruct': unreferenced local variable
      1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(70): warning C4101: 'ret_acceptCalibrationPoint': unreferenced local variable
      1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(26): warning C4101: 'systemInfoData': unreferenced local variable
-     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(202): warning C4101: 'sendToResult': unreferenced local variable
-     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(201): warning C4101: 'bytesRead': unreferenced local variable
-     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(206): warning C4101: 'i': unreferenced local variable
+     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(206): warning C4101: 'sendToResult': unreferenced local variable
+     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(205): warning C4101: 'bytesRead': unreferenced local variable
+     1>c:\users\zjarsen\desktop\eyetracking-offscreencalibration\cppdemo\eyetracking-offscreencalibration.cpp(210): warning C4101: 'i': unreferenced local variable
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zjarsen\Desktop\eyeTracking-offscreenCalibration\Debug\eyeTracking-offscreenCalibration.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\SMI\iView X SDK\lib" iViewXAPI.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\zjarsen\Desktop\eyeTracking-offscreenCalibration\Debug\eyeTracking-offscreenCalibration.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zjarsen\Desktop\eyeTracking-offscreenCalibration\Debug\eyeTracking-offscreenCalibration.lib" /MACHINE:X86 /SAFESEH "Debug\eyeTracking-offscreenCalibration.obj"
          Debug\stdafx.obj
@@ -35,4 +35,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.11
+Time Elapsed 00:00:02.66

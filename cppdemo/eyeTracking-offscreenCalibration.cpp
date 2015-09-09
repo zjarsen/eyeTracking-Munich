@@ -104,7 +104,11 @@ int _tmain(int argc, _TCHAR* argv[])
 		{
 			// set up calibration point
 			iV_SetSpeedMode(30);
-			iV_ChangeCalibrationPoint(1, 30, 30);
+			iV_ChangeCalibrationPoint(1, 20, 35);
+			iV_ChangeCalibrationPoint(2, 543, 516);
+			iV_ChangeCalibrationPoint(3, 891, 711);
+			iV_ChangeCalibrationPoint(4, 983, 52);
+			iV_ChangeCalibrationPoint(5, 1231, 225);
 
 			// set up calibration
 			calibrationData.method = 5;
