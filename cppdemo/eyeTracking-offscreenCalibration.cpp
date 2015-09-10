@@ -31,6 +31,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	int returnedValue = 0;
 	int numOfCalibrationPoints;
 
+
 	//add
 	SOCKET sock;
 	sockaddr_in serverAddr;
@@ -114,11 +115,11 @@ int _tmain(int argc, _TCHAR* argv[])
 			calibrationData.method = 5;
 			calibrationData.speed = 0;
 			calibrationData.displayDevice = 0;
-			calibrationData.targetShape = 2;
+			calibrationData.targetShape = 1;
 			calibrationData.foregroundBrightness = 250;
-			calibrationData.backgroundBrightness = 230;
+			calibrationData.backgroundBrightness = 60;
 			calibrationData.autoAccept = 2;
-			calibrationData.targetSize = 20;
+			calibrationData.targetSize = 80;
 			calibrationData.visualization = 1;
 			strcpy_s(calibrationData.targetFilename, 256, "");
 
@@ -207,19 +208,18 @@ int _tmain(int argc, _TCHAR* argv[])
 			char inputBuffer[BUFMAX] = { 0 };
 			char BufferL[BUFMAX] = { 0 };// + std::to_string(accuracyData.deviationLX);
 			char BufferR[BUFMAX] = { 0 };
-			int i;
 
 			//call back
 			iV_GetSample(&sampleData);
-			sprintf(BufferL, "%lf", sampleData.leftEye.gazeX);
-			sprintf(BufferR, "%lf", sampleData.leftEye.gazeY);
+			sprintf(BufferL, "%lf", (sampleData.leftEye.gazeX + sampleData.rightEye.gazeX)/2);
+			sprintf(BufferR, "%lf", (sampleData.leftEye.gazeY + sampleData.rightEye.gazeX)/2);
 			strcat(inputBuffer, BufferL);
-			strcat(inputBuffer, " _ ");
+			strcat(inputBuffer, "_");
 			strcat(inputBuffer, BufferR);
-
-			//call back end
+			
 			printf("%s\n", inputBuffer);
-			printf("\n");
+			//call back end
+			Sleep(33);
 			// = sendto(sock, inputBuffer, strlen(inputBuffer), 0, (SOCKADDR*)& serverAddr, sizeof(serverAddr));
 
 			//if (sendToResult == SOCKET_ERROR) {
